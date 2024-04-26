@@ -1,14 +1,15 @@
-from common.constants import CARDS_DEALINGS
-from games.kuhn import KuhnRootChanceGameState
+#from common.constants import CARDS_DEALINGS
+from common.clairvoyance_constants import CARDS_DEALINGS
+from games.clairvoyance import ClairvoyanceRootChanceGameState
 from games.algorithms import ChanceSamplingCFR, VanillaCFR
 
 
-root = KuhnRootChanceGameState(CARDS_DEALINGS)
+root = ClairvoyanceRootChanceGameState(CARDS_DEALINGS)
 chance_sampling_cfr = ChanceSamplingCFR(root)
 chance_sampling_cfr.run(iterations = 1000)
 chance_sampling_cfr.compute_nash_equilibrium()
 print(chance_sampling_cfr.value_of_the_game())
-print('regrets', chance_sampling_cfr.cumulative_regrets)
+print('NashEquil', chance_sampling_cfr.nash_equilibrium)
 # read Nash-Equilibrum via chance_sampling_cfr.nash_equilibrium member
 # try chance_sampling_cfr.value_of_the_game() function to get value of the game (-1/18)
 
