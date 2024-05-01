@@ -1,5 +1,5 @@
-KA = "KA"; KQ = "KQ"
-CARDS_DEALINGS = [KQ, KQ]
+QJ = "QJ"; QK = "QK"
+CARDS_DEALINGS = [QJ, QK]
 
 CHANCE = "CHANCE"
 
@@ -10,8 +10,8 @@ BET = "BET"
 
 #optomized for the IP Player
 RESULTS_MAP = {}
-RESULTS_MAP[KA] = 1
-RESULTS_MAP[KQ] = -1
+RESULTS_MAP[QJ] = 1
+RESULTS_MAP[QK] = -1
 
 A = 1
 B = -A
